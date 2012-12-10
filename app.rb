@@ -3,7 +3,7 @@ require 'sinatra'
 require "sinatra/reloader"
 require 'data_mapper'
 
-DataMapper.setup(:default, ENV['DATABASE_URL'] || "sqlite3://#{Dir.pwd}/my.db")
+DataMapper.setup(:default, ENV['HEROKU_POSTGRESQL_CRIMSON_URL'])
 
 APP_VERSION = '0.0.1'
 
