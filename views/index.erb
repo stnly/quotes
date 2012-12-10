@@ -1,0 +1,17 @@
+<h3>Search</h3>
+<form action="/search" method="post">
+  <input type="text" name="query"/><br />   
+  <input type="submit"/>
+</form>
+
+<% @quotes.each do |q| %>
+    <h3><%= q.id %></h3>
+    <p><%= q.quote %></p>
+    <p><%= q.created_at %></p>
+<% end %>
+
+<h3>New Quote</h3>
+<form action="/new" method="post">
+  <input type="text" name="new"/><br />   
+  <input type="submit" />
+</form>
